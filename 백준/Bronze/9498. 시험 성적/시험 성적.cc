@@ -1,17 +1,25 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
-int main()
-{
-    int score;
-    scanf("%d", &score);
-    if(score >= 90)
-        printf("A");
-    else if(score >= 80)
-        printf("B");
-    else if(score >= 70)
-        printf("C");
-    else if(score >= 60)
-        printf("D");
-    else
-        printf("F");
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int a;
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       if(a >= 90 ){
+        System.out.println("A");
+       }
+       else if(a >= 80){
+        System.out.println("B");
+       }
+       else if(a>= 70){
+        System.out.println("C");
+       }
+       else if(a>= 60){
+        System.out.println("D");
+       }
+       else{
+        System.out.println("F");
+       }
+       sc.close();
+    }
 }
