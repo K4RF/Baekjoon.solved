@@ -1,19 +1,27 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
+import java.util.Scanner;
 
-int main(){
-    int x,y;
-    scanf("%d %d", &x, &y);
-    if(x > 0){
-        if(y > 0)
-            printf("1");
-        else
-            printf("4");
-    }
-    else{
-        if(y > 0)
-            printf("2");
-        else
-            printf("3");
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int a, b;
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       b = sc.nextInt();
+       if(a > 0){
+            if( b> 0){
+                System.out.println("1");
+            }
+            else{
+                System.out.println("4");
+            }
+       }
+       else{
+            if(b > 0){
+                System.out.println("2");
+            }
+            else{
+                System.out.println("3");
+            }
+       }
+       sc.close();
     }
 }
