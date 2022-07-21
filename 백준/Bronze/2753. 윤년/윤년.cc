@@ -1,14 +1,19 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
+import java.util.Scanner;
 
-int main()
-{
-    int year;
-    scanf("%d", &year);
-    if ((year % 4) == 0 && (year % 100) != 0)
-        printf("1");
-    else if ((year % 400) == 0)
-        printf("1");
-    else
-        printf("0");
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int a;
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       if((a%4 ==0) && (a%100 != 0)){
+        System.out.println("1");
+       }
+       else if(a % 400 == 0){
+        System.out.println("1");
+       }
+       else{
+        System.out.println("0");
+       }
+       sc.close();
+    }
 }
