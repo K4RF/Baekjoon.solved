@@ -1,15 +1,21 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
+import java.util.Scanner;
 
-int main(){
-    int H, M;
-    scanf("%d %d", &H, &M);
-    M = M - 45;
-    if(M < 0 ){
-        H = H - 1;
-        if(H < 0)
-            H = 24 + H;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int H, M;
+       Scanner sc = new Scanner(System.in);
+       H = sc.nextInt();
+       M = sc.nextInt();
+
+       M -= 45;
+       if(M < 0){
+        H--;
+        if(H <0){
+            H = 23;
+        }
         M = 60 + M;
+       }
+       System.out.println(H + " " + M);
+       sc.close();
     }
-    printf("%d %d\n", H, M);
 }
