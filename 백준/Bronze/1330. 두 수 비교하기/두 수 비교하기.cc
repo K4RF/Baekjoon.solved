@@ -1,13 +1,20 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
-int main()
-{
-    int A,B;
-    scanf("%d %d", &A, &B);
-    if(A > B)
-        printf(">");
-    else if(A < B)
-        printf("<");
-    else
-        printf("==");
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int a, b;
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       b = sc.nextInt();
+       if(a > b){
+        System.out.println(">");
+       }
+       else if(a < b){
+        System.out.println("<");
+       }
+       else if(a == b){
+        System.out.println("==");
+       }
+       sc.close();
+    }
 }
