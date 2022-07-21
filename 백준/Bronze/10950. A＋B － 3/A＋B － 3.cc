@@ -1,11 +1,16 @@
-#include <stdio.h>
-#pragma warning(disable:4996)
+import java.util.Scanner;
 
-int main(){
-    int A, B, T;
-    scanf("%d", &T);
-    for(int i = 0; i < T; i++){
-        scanf("%d %d", &A, &B);
-        printf("%d\n", A+B);
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int T, A, B;
+       Scanner sc = new Scanner(System.in);
+       T = sc.nextInt();
+
+       for(int i = 0; i < T; i++){
+        A = sc.nextInt();
+        B = sc.nextInt();
+        System.out.println(A + B);
+       }
+       sc.close();
     }
 }
