@@ -1,11 +1,16 @@
-#include<stdio.h>
-#pragma warning(disble:4996)
+import java.util.Scanner;
 
-int main(){
-    int n;
-    int sum = 0;
-    scanf("%d", &n);
-    for(int i = 1; i <= n; i++)
-        sum = sum + i;
-    printf("%d\n", sum);
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int n;
+        int result = 0;
+       Scanner sc = new Scanner(System.in);
+       n = sc.nextInt();
+
+       for(int i = 1; i <= n; i++){
+        result += i;
+       }
+       System.out.println(result);
+       sc.close();
+    }
 }
