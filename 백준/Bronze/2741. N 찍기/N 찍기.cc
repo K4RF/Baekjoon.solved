@@ -1,9 +1,14 @@
-#include <stdio.h>
-#pragma warning(disable:4996)
-int main()
-{
-    int N,i;
-    scanf("%d", &N);
-    for(i = 1; i <= N; ++i)
-        printf("%d\n", i);
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int T;
+       Scanner sc = new Scanner(System.in);
+       T = sc.nextInt();
+
+       for(int i = 1; i <= T; i++){
+        System.out.println(i);
+       }
+       sc.close();
+    }
 }
