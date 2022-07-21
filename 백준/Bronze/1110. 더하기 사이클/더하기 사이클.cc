@@ -1,29 +1,20 @@
-#include<stdio.h>
+import java.util.Scanner;
 
-int main(void)
-{
-	int n, a, b, c;
-
-	int i = 0;
-	scanf("%d", &n);
-
-	a = n / 10;
-	b = n % 10;
-
-	 while (n>=0 && n<=99)
-	{	
-		c = b;
-		b = (a + b) % 10;
-		a = c;
-
-		i++;
-		if (n == a * 10 + b)
-		{
-			break;
-		}
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int A, B, C;
+       Scanner sc = new Scanner(System.in);
+        A = sc.nextInt();
+        C = A;
+        for(int i=1; ;i++){
+            B = (C/10) + (C%10);
+            C = ((C%10)*10) + (B%10);
+            if(C == A){
+                System.out.println(i);
+                break;
+            }
+        }
+			
+		sc.close();
 	}
-	printf("%d", i);
-
-	return 0;
-
 }
