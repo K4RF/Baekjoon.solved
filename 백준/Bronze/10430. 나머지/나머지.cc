@@ -1,12 +1,16 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
+import java.util.Scanner;
 
-int main()
-{
-    int A, B, C;
-    scanf("%d %d %d", &A, &B, &C);
-    printf("%d\n", (A + B) % C);
-    printf("%d\n", ((A % C) + (B % C)) % C);
-    printf("%d\n", (A * B) % C);
-    printf("%d\n", ((A % C) *(B % C)) % C);
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int a, b, c;
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       b = sc.nextInt();
+       c = sc.nextInt();
+       System.out.println((a+b) % c);
+       System.out.println(((a%c) + (b%c))%c);
+       System.out.println((a*b) % c);
+       System.out.println(((a%c) * (b%c))%c);
+       sc.close();
+    }
 }
