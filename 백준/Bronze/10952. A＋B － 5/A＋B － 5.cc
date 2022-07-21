@@ -1,13 +1,20 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
-int main()
-{
-    int A,B;
-    while(1){
-        scanf("%d %d", &A, &B);
-        if(A ==0 && B ==0)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int A, B;
+       Scanner sc = new Scanner(System.in);
+      
+      
+
+       for(int i = 0; ; i++){
+        A = sc.nextInt();
+        B = sc.nextInt();
+        if(A == 0 && B ==0){
             break;
-        printf("%d\n", A+B);
+        }
+        System.out.println(A + B);       
+       }
+       sc.close();
     }
-    return(0);
 }
