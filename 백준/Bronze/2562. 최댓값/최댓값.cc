@@ -1,15 +1,21 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
-int main(){
-    int i,n;
-    int a[9];
-    int max = -1000000;
-    for(i=0;i<9;i++){
-        scanf("%d",&a[i]);
-        if(max <a[i]){
-            max = a[i];
-            n = i;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {   
+        int count = 0;
+        int max = -1000000;
+
+       Scanner sc = new Scanner(System.in);
+        int [] num = new int[9];
+
+        for(int i=0; i<9; i++){
+            num[i] = sc.nextInt();
+            if(num[i] > max){
+                max = num[i];
+                count = i + 1;
+            }
         }
-    }
-    printf("%d\n%d\n", max,n+1);
+        System.out.println(max + "\n" + count);
+		sc.close();
+	}
 }
