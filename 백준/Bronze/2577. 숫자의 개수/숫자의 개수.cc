@@ -1,39 +1,35 @@
-#include <stdio.h>
-#pragma warning(disable:4996)
-int main()
-{
-    int count[9];
-    int a, b, c, result, tem;
-    int zero = 0;
-    int i = 0;
-    while (i < 9)
-    {
-        count[i] = 0;
-        i++;
-    }
-    i = 0;
+import java.util.Scanner;
 
-    scanf("%d", &a);
-    scanf("%d", &b);
-    scanf("%d", &c);
+public class Main {
+    public static void main(String[] args) throws Exception {   
+        int a, b, c, result, temp;
+        int zero = 0;
+        int [] count = new int[9];
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       b = sc.nextInt();
+       c = sc.nextInt();
+       result = a*b*c;
 
-    result = a * b * c;
+        for(int i=0; i<9; i++){
+            count[i] = 0;
+        }
 
-    while (result > 0)
-    {
-        tem = result % 10;
-        if (tem == 0)
-            zero++;
-        else if (tem > 0)
-            count[tem - 1] += 1;
-        result /= 10;
-    }
-    printf("%d\n", zero);
-    while (i <= 8)
-    {
-        printf("%d\n", count[i]);
-        i++;
-    }
+        while(result > 0){
+            temp = result % 10;
+            if(temp == 0){
+                zero++;
+            }
+            else if(temp > 0){
+                count[temp - 1]++;
+            }
+            result /= 10;
+        }
 
-    return (0);
+        System.out.println(zero);
+        for(int i =0; i<9; i++){
+            System.out.println(count[i]);
+        }
+		sc.close();
+	}
 }
