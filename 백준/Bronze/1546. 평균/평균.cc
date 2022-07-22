@@ -1,20 +1,24 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
+import java.util.Arrays;
+import java.util.Scanner;
 
-int main(){
-    int M = -1000000;
-    int n;
-    double Avg = 0;
-    double score[1001];
-    scanf("%d", &n);
-    for(int i = 0; i < n; i++){
-        scanf("%lf", &score[i]);
-        if( M < score[i])
-            M = score[i];
-    }
-    for(int i = 0; i < n; i++){
-        score[i] = score[i]/M*100;
-        Avg += score[i];
-    }
-    printf("%lf", Avg/n);
+public class Main {
+    public static void main(String[] args) throws Exception {   
+        int A;
+        double avg = 0;
+        Scanner sc = new Scanner(System.in);
+        A = sc.nextInt();
+        double [] score = new double[A];
+       
+
+       for(int i =0; i < A; i++){
+        score[i] = sc.nextDouble();
+       }
+       Arrays.sort(score);
+       for(int i = 0; i < score.length; i++){
+        avg += ((score[i]/score[score.length-1])*100);
+       }
+
+       System.out.println(avg/A);
+		sc.close();
+	}
 }
